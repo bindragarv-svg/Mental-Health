@@ -6,7 +6,7 @@ from typing import Literal
 from fastapi.middleware.cors import CORSMiddleware
 from pathlib import Path
 
-BaseDIR = Path(__file__).resolve().parent
+BaseDIR = Path(__file__).resolve().parent.parent
 modelpath = BaseDIR /"model"/"model.pkl"
 
 model = joblib.load(modelpath)
