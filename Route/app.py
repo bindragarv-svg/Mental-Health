@@ -4,8 +4,12 @@ from  pydantic import BaseModel,Field
 import pandas as pd
 from typing import Literal
 from fastapi.middleware.cors import CORSMiddleware
+from pathlib import Path
 
-model = joblib.load(r"D:\Desktop\ai\project\mental health\model\model.pkl")
+BaseDIR = Path(__file__).resolve().parent
+modelpath = BaseDIR /"model"/"model.pkl"
+
+model = joblib.load(modelpath)
 
 class Mental(BaseModel):
     Age:int= Field(...,ge=10,le=100)
