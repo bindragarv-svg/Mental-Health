@@ -34,7 +34,7 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[" https://mental-healthcondition.onrender.com"],
+    allow_origins=[" https://mental-healthcondition.onrender.com/"],
     allow_methods=["*"],
     allow_headers=["*"],
 )
