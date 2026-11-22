@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE = (import.meta.env.VITE_API_URL || 'http://127.0.0.1:2200').replace(/\/+$/, '');
+const BASE = (import.meta.env.VITE_API_URL || 'http://127.0.0.1:2200'|| "https://mental-healthcondition.onrender.com/").replace(/\/+$/, '');
 
 const client = axios.create({
   baseURL: BASE,
